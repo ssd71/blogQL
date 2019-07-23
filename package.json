@@ -1,0 +1,27 @@
+{
+  "name": "blogQL",
+  "version": "1.0.0",
+  "description": "A GraphQL based API for fetching and adding to a database of blog posts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint \"./**/*.js\"",
+    "start": "node index.js"
+  },
+  "author": "ssd71",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^2.7.0",
+    "express": "^4.17.1",
+    "graphql": "^14.4.2",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.10.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "sqlite3": "^4.0.9"
+  }
+}
