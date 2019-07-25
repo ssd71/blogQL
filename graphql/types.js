@@ -9,8 +9,8 @@ type Query {
 
 type Mutation {
   createPost(title: String!, description: String, body: String!): Post!
-  updatePost(id: Int!, title: String, description: String, body: String): Post
-  deletePost(id: Int!): Post
+  updatePost(id: Int!, title: String, description: String, body: String): [Int!]!
+  deletePost(id: Int!): Int
 }
 
 type Post {
