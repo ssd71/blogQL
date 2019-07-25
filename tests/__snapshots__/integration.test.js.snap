@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mutations creates single post 1`] = `
+Object {
+  "data": Object {
+    "createPost": Object {
+      "id": 1,
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Mutations deletes single post 1`] = `
+Object {
+  "data": Object {
+    "deletePost": 0,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Mutations updates existing post 1`] = `
+Object {
+  "data": Object {
+    "updatePost": Array [
+      0,
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Queries gets a single post 1`] = `
+Object {
+  "data": Object {
+    "getPost": Object {
+      "body": "testBody",
+      "description": "testDesc",
+      "id": 1,
+      "title": "testTitle",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Queries gets all posts 1`] = `
+Object {
+  "data": Object {
+    "feed": Array [
+      Object {
+        "body": "testBody",
+        "description": "testDesc",
+        "id": 1,
+        "title": "testTitle",
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
