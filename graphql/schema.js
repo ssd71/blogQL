@@ -7,12 +7,12 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: () => dataSources,
-  playground: {
+  playground: (process.env.DATABASE_URL ? false : {
     endpoint: `http://localhost:${process.env.PORT || 4000}/graphql`,
     settings: {
       'editor.theme': 'dark',
     },
-  },
+  }),
   tracing: true,
 });
 
