@@ -1,40 +1,13 @@
 const resolvers = {
   Query: {
     info: () => 'GraphQL API to access blog posts',
-    feed: (_parent, _args, { models }) => models.Post.findAll(),
-    getPost: (_parent, args, { models }) => models.Post.findByPk(args.id),
+    feed: (_parent, _args, { PostAPI }) => PostAPI.getAllPosts(),
+    getPost: (_parent, args, { PostAPI }) => PostAPI.getPost(args),
   },
   Mutation: {
-    createPost: (_parent, args, { models }) => models.Post.create({
-      title: args.title,
-      description: args.description,
-      body: args.body,
-    }),
-    updatePost: (_parent, args, { models }) => {
-      models.Post.update({
-        title: args.title,
-        description: args.description,
-        body: args.body,
-      },
-      {
-        where: {
-          id: args.id,
-        },
-      });
-    },
-    deletePost: (_parent, args, { models }) => {
-      models.Post.destroy({
-        where: {
-          id: args.id,
-        },
-      });
-    },
-  },
-  Post: {
-    id: parent => parent.get('id'),
-    title: parent => parent.get('title'),
-    description: parent => parent.get('description'),
-    body: parent => parent.get('body'),
+    createPost: (_parent, args, { PostAPI }) => PostAPI.createPost(args),
+    updatePost: (_parent, args, { PostAPI }) => PostAPI.updatePost(args),
+    deletePost: (_parent, args, { PostAPI }) => PostAPI.deletePost(args),
   },
 };
 
