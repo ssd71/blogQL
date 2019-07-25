@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- node
+script:
+- npm run lint
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: R87bS3A3ndEIacd22HnN7ryI2wCi/GGI7+6ofg5T0HqZ/9RTxTFtOezQi/CE+LT30jSWpWTOPUBtAYsmHb4lZJ5kw1bTGqaDRFmRObYVMp/dZB4gBx8TG55eQ9Kg0S/u8bdl5LX2wW9xfTw0qsnfrXS8G2mD7q9tZ/xoAYjD68EdtBOo7s95N8E3xAL5qDmDJaBD0TyvTH7bwi/fHKsRK5ptBO+S1VHu7crT8lE+NntPYF4Xq8vb6F3nOy8J6ZAfWQANM33r/QhTrBYdA3hR+BkIfGf5QK7f2u31ghiiUmNeRrjCPgR2YT1GXk3Skb0m9/Enz01zyjshIA+tEtor+XJVBI6Eralw8x7Sc5GWHmopqsSvTgURCtNtYzPCKE42mjeSJvZ79bLXfnmCWdLIBLQvs7p4hKOdsmw6Un0BlEAlrn6gikpUumrBNkN8efdSbTsdRNB98nJ83m9c1qdduzhhmd53sUl+YUTDDsDmPpp8bjGwLRK73VJh+9sB5kW28EWjm3W6hIeTRUvIYz8LhBE7Y0QiawO4WnfayPjb47+W6nrC9HqOeMooi6cQ6eaYpRjXac1jUPm76gjR5z6hbza45nkYb2Iqq0+hGPE2T4SzWOsJYXpdLViBrmd5b3mlGtd+tjsD+deaCY7UHiugyScSzGdoAWzo8vdf4iGMuU4=
+  app: apisensei
+  on:
+    repo: ssd71/blogQL
